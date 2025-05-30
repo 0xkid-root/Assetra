@@ -1,0 +1,63 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+
+  <!-- Main Card -->
+  <rect x="150" y="100" width="500" height="400" rx="24" fill="url(#cardGradient)" filter="drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"/>
+
+  <!-- Header Section -->
+  <text x="200" y="160" font-family="system-ui" font-size="24" font-weight="600" fill="#1e293b">Create Your Account</text>
+  <text x="200" y="190" font-family="system-ui" font-size="14" fill="#64748b">Start investing in real estate in minutes</text>
+
+  <!-- Form Fields -->
+  <g transform="translate(200, 220)">
+    <!-- Email Field -->
+    <rect width="400" height="48" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="16" y="30" font-family="system-ui" font-size="14" fill="#64748b">Email address</text>
+
+    <!-- Password Field -->
+    <rect y="64" width="400" height="48" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="16" y="94" font-family="system-ui" font-size="14" fill="#64748b">Password</text>
+
+    <!-- Sign Up Button -->
+    <rect y="144" width="400" height="48" rx="8" fill="url(#accentGradient)"/>
+    <text x="165" y="174" font-family="system-ui" font-size="14" font-weight="600" fill="white">Create Account</text>
+  </g>
+
+  <!-- Social Login Options -->
+  <g transform="translate(200, 460)">
+    <text x="0" y="0" font-family="system-ui" font-size="14" fill="#64748b">Or continue with</text>
+    
+    <!-- Social Icons -->
+    <g transform="translate(0, 20)">
+      <!-- Google -->
+      <rect width="48" height="48" rx="24" fill="white" stroke="#e2e8f0"/>
+      <path d="M24 14C28.97 14 33.37 16.16 36.04 19.44C36.48 20.01 36.89 20.57 37.3 21.15L31.47 25.81C29.9 23.46 27.13 21.97 24 21.97C19.02 21.97 15 26 15 31C15 36 19.02 40.03 24 40.03C28.98 40.03 33 36 33 31H24" transform="translate(0, 0)" stroke="#4285f4" stroke-width="2" fill="none"/>
+
+      <!-- Apple -->
+      <rect x="64" width="48" height="48" rx="24" fill="white" stroke="#e2e8f0"/>
+      <path d="M32 20C33.1 20 34.1 20.2 35 20.6C35.9 21 36.5 21.5 37 22.1C37.5 22.7 37.8 23.4 38 24.2C38.2 25 38.3 25.8 38.3 26.7C38.3 27.6 38.2 28.4 38 29.2C37.8 30 37.5 30.7 37 31.3C36.5 31.9 35.9 32.4 35 32.8C34.1 33.2 33.1 33.4 32 33.4H28V40H24V20H32Z" transform="translate(64, 0)" fill="#000000"/>
+    </g>
+  </g>
+
+  <!-- Decorative Elements -->
+  <circle cx="600" cy="150" r="40" fill="url(#accentGradient)" opacity="0.1"/>
+  <circle cx="200" cy="450" r="30" fill="url(#accentGradient)" opacity="0.1"/>
+  <circle cx="650" cy="400" r="25" fill="url(#accentGradient)" opacity="0.1"/>
+</svg>
