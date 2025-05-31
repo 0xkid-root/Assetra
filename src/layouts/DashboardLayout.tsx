@@ -14,6 +14,7 @@ import RewardsPage from "@/app/dashboard/rewards/page";
 import SecurityPage from "@/app/dashboard/security/page";
 import MessagesPage from "@/app/dashboard/messages/page";
 import SettingsPage from "@/app/dashboard/settings/page";
+import DashboardPage from "@/app/dashboard/page";
 
 
 
@@ -52,7 +53,7 @@ export default function DashboardLayout() {
   const renderComponent = () => {
     switch (currentPath) {
       case '/dashboard':
-        return <AnalyticsPage />;
+        return <DashboardPage />;
       case '/dashboard/marketplace':
         return <MarketplacePage />;
       case '/dashboard/portfolio':
@@ -76,7 +77,7 @@ export default function DashboardLayout() {
       case '/dashboard/settings':
         return <SettingsPage />;
       default:
-        return <AnalyticsPage />;
+        return <DashboardPage />;
     }
   };
 
