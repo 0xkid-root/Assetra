@@ -268,7 +268,6 @@ const Hero: React.FC = () => {
                   Redefined by{' '}
                   <span className="relative bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                     Web3
-                    <div className="absolute -inset-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur opacity-30 animate-pulse" aria-hidden="true" />
                   </span>
                 </span>
               </h1>

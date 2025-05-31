@@ -161,11 +161,11 @@ export default function Header() {
             )}
           </Button>
           
-          <Button variant="default" className="hidden md:flex items-center gap-2 rounded-full">
+          {/* <Button variant="default" className="hidden md:flex items-center gap-2 rounded-full">
             <CircleDollarSign className="h-4 w-4" />
             <span>Get Started</span>
             <ArrowRight className="h-4 w-4" />
-          </Button>
+          </Button> */}
           
           <Button
             variant="ghost"
