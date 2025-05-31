@@ -2,7 +2,6 @@ import { Building2, Mail, Twitter, Facebook, Instagram, Linkedin, Github, ArrowR
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-import { Separator } from '@/components/ui/separator';
 import { useState } from 'react';
 
 export default function Footer() {
