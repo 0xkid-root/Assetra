@@ -45,6 +45,8 @@ function App() {
         <Footer />
         <ScrollToTop />
         <Toaster />
+
+
       </div>
     </ThemeProvider>
   );
