@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
@@ -11,6 +12,32 @@ import Benefits from '@/components/sections/Benefits';
 import Testimonials from '@/components/sections/Testimonials';
 import CTA from '@/components/sections/CTA';
 import ScrollToTop from '@/components/ui/scroll-to-top';
+import DashboardLayout from './layouts/DashboardLayout';
+import Overview from './pages/dashboard/Overview';
+import Analytics from './pages/dashboard/Analytics';
+import Portfolio from './pages/dashboard/Portfolio';
+import Marketplace from './pages/dashboard/Marketplace';
+import Transactions from './pages/dashboard/Transactions';
+
+function LandingPage() {
+  return (
+    <>
+      <Header />
+      <main className="relative z-10">
+        <Hero />
+        <Features />
+        <HowItWorks />
+        <Properties />
+        <Benefits />
+        <Testimonials />
+        <CTA />
+      </main>
+      <Footer />
+      <ScrollToTop />
+      <Toaster />
+    </>
+  );
+}
 
 function App() {
   useEffect(() => {
@@ -26,28 +53,18 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="assetra-theme">
-      <div className="relative min-h-screen bg-background">
-        <div className="fixed inset-0 -z-10 bg-gradient-to-br from-background/80 via-background to-background/90"></div>
-        <div className="fixed inset-0 -z-10 bg-[url('/noise.svg')] opacity-5"></div>
-        
-        <Header />
-        
-        <main className="relative z-10">
-          <Hero />
-          <Features />
-          <HowItWorks />
-          <Properties />
-          <Benefits />
-          <Testimonials />
-          <CTA />
-        </main>
-        
-        <Footer />
-        <ScrollToTop />
-        <Toaster />
-
-
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route index element={<Overview />} />
+            <Route path="analytics" element={<Analytics />} />
+            <Route path="portfolio" element={<Portfolio />} />
+            <Route path="marketplace" element={<Marketplace />} />
+            <Route path="transactions" element={<Transactions />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
