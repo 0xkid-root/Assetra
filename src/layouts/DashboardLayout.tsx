@@ -4,11 +4,12 @@ import Sidebar from '../components/dashboard/Sidebar';
 import { motion } from 'framer-motion';
 
 export default function DashboardLayout() {
-  const [sidebarWidth, setSidebarWidth] = useState(256); // 64px (collapsed) or 256px (expanded)
+  const [collapsed, setCollapsed] = useState(false);
+  const sidebarWidth = collapsed ? 64 : 256;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-background/90 flex">
-      <Sidebar />
+      <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
       <motion.main
         animate={{ marginLeft: sidebarWidth }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}

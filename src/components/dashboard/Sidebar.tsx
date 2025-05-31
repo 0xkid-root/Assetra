@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { LayoutDashboard, BarChart3, PieChart, Building2, History, Wallet, FileText, Users, MessageSquare, Gift, Shield, Settings, Sun, Moon } from 'lucide-react';
 
@@ -17,8 +17,12 @@ const navItems = [
   { title: 'Settings', icon: Settings, path: '/dashboard/settings' },
 ];
 
-export default function Sidebar() {
-  const [collapsed, setCollapsed] = useState(false);
+interface SidebarProps {
+  collapsed: boolean;
+  setCollapsed: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
   const [dark, setDark] = useState(true);
   const location = useLocation();
 
